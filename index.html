@@ -171,6 +171,7 @@
                     
                     if (id_1.object3D.visible == true) {
                         if(!elem){
+			    alert("1");	
                             elem = true;
                             entity = id_1.querySelector('[sound]');
                             soundComponent = entity.components.sound;
@@ -183,6 +184,7 @@
                         }
                     } else if(id_2.object3D.visible == true) {
                         if(!elem){
+			    alert("2");
                             elem = true;
                             entity = id_2.querySelector('[sound]');
                             soundComponent = entity.components.sound;
@@ -195,6 +197,7 @@
                         }
                     }else if(id_3.object3D.visible == true) {
                         if(!elem){
+			    alert("3");
                             elem = true;
                             entity = id_3.querySelector('[sound]');
                             soundComponent = entity.components.sound;
@@ -207,7 +210,7 @@
                         }
                     } else {
                         elem = false;
-                        //entity.components.sound.pauseSound();
+                        entity.components.sound.pauseSound();
                     }
                 }
             });
