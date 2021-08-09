@@ -164,47 +164,43 @@
                 },
                 tick: function () {
                     
-                    var entity  = document.querySelector('[sound]');
-                    var id_1    = document.getElementById('animated-marker-01');
-                    var id_2    = document.getElementById('animated-marker-02');
-                    var id_3    = document.getElementById('animated-marker-03');
-                    
-                    if (id_1.object3D.visible == true) {
+                    if (document.getElementById('animated-marker-01').object3D.visible == true) {
                         if(!elem){
 			    alert("1");	
                             elem = true;
-                            entity = id_1.querySelector('[sound]');
+			    var entity  = document.querySelector('[sound]');
+                            entity = document.getElementById('animated-marker-01').querySelector('[sound]');
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
                                $('#popupnext').modal('show');
-                               id_1.setAttribute('visible', false);
+                               document.getElementById('animated-marker-01').setAttribute('visible', false);
                                //id_1.object3D.visible = false;
                             }, 54000);
                         }
-                    } else if(id_2.object3D.visible == true) {
+                    } else if(document.getElementById('animated-marker-02').object3D.visible == true) {
                         if(!elem){
 			    alert("2");
                             elem = true;
-                            entity = id_2.querySelector('[sound]');
+                            entity = document.getElementById('animated-marker-02').querySelector('[sound]');
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
                                $('#popupnext').modal('show');
-                               id_2.setAttribute('visible', false);
+                               document.getElementById('animated-marker-02').setAttribute('visible', false);
                                //id_1.object3D.visible = false;
                             }, 30000);
                         }
-                    }else if(id_3.object3D.visible == true) {
+                    }else if(document.getElementById('animated-marker-03').object3D.visible == true) {
                         if(!elem){
 			    alert("3");
                             elem = true;
-                            entity = id_3.querySelector('[sound]');
+                            entity = document.getElementById('animated-marker-03').querySelector('[sound]');
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
                                $('#popupnext').modal('show');
-                               id_3.setAttribute('visible', false);
+                               document.getElementById('animated-marker-03').setAttribute('visible', false);
                                //id_1.object3D.visible = false;
                             }, 30000);
                         }
