@@ -148,10 +148,11 @@
         </div>
         <div id="popupnext" class="modal fade popup" role="dialog">
             <div class="wrapper">
-                <h2 class="popup-title">Instruções</h2>
+                <h2 class="popup-title">Saiba mais!</h2>
                 <div class="popup-content">
-                    <p>Vá para o próximo marcador!
-                    </p>
+                	<h3 id="titulo"></h3>    
+			<p id="sobre"></p>
+			<p id="saibamais"></p>
                 </div>
                 <a class="close" data-dismiss="modal"> X Fechar</a>
             </div>
@@ -174,7 +175,10 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-                               $('#popupnext').modal('show');
+			       $("#titulo").html("ANDRÉ VIDAL DE NEGREIROS");
+			       $("#sobre").html("Foi um militar e governador colonial luso-brasileiro, conhecido principalmente por ter sido um dos líderes da Insurreição Pernambucana, contra a colonização holandesa no Brasil.");	
+                               $("#saibamais").html("se quiser saber mais, clique aqui.");
+			       $('#popupnext').modal('show');
                             }, 54000);
                         }
                     } else if(document.getElementById('animated-marker-02').object3D.visible == true) {
@@ -184,6 +188,9 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
+			       $("#titulo").html("Henrique Dias");
+			       $("#sobre").html("Foi um militar nascido no Brasil colonial, filho de escravos africanos libertos. Foi um dos heróis da Batalha dos Guararapes, episódio decisivo da Insurreição Pernambucana (expulsão dos holandeses do Nordeste do Brasil).");	
+                                $("#saibamais").html("se quiser saber mais, clique aqui.");
                                $('#popupnext').modal('show');
                             }, 49000);
                         }
@@ -194,6 +201,9 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
+			       $("#titulo").html("António Dias Cardoso");
+			       $("#sobre").html("Foi um dos principais líderes da Insurreição Pernambucana, movimento responsável pela expulsão dos neerlandeses do Nordeste do Brasil. Conhecedor das técnicas de combate dos indígenas, foi apelidado de 'mestre das emboscadas'.");	
+                               $("#saibamais").html("se quiser saber mais, clique aqui.");
                                $('#popupnext').modal('show');
                             }, 67200);
                         }
