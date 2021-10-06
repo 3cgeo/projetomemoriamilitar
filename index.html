@@ -41,6 +41,7 @@
                 <a-asset-item id="animated-asset-01" src="assets/01/01.gltf?vs=01"></a-asset-item>
                 <a-asset-item id="animated-asset-02" src="assets/02/HENRIQUE DIAS_convertido.gltf?vs=02" ></a-asset-item>
                 <a-asset-item id="animated-asset-03" src="assets/03/ANTONIO_DIAS_CARDOSO4.gltf?vs=03" ></a-asset-item>
+		<a-asset-item id="animated-asset-04" src="assets/07 - SOLDADO_HOLANDÊS.glb?vs=03" ></a-asset-item>
                 <audio id="sound01" src="assets/01/01.mp3?vs=01" preload="auto"></audio>
                 <audio id="sound02" src="assets/02/Henrique_dias.mp3?vs=02" preload="auto"></audio>
                 <audio id="sound03" src="assets/03/dias_cardoso_1.mp3?vs=03" preload="auto"></audio>
@@ -116,6 +117,31 @@
                     scale="1 1 1"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset-03"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+		
+	    <a-marker
+                id="animated-marker-04"
+                type="pattern"
+                preset="custom"
+                url="assets/03/marker.patt?vs=18.08.21"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                soundhandler
+            >
+                <a-entity
+                    sound="src: #sound03" autoplay="false"
+                    position="0 0 0"
+                    rotation="-20 0 0"
+                    heigth="3"
+                    width="1.5"
+                    id="bowser-model"
+                    scale="1 1 1"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset-04"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -204,6 +230,19 @@
 			       $("#titulo").html("António Dias Cardoso");
 			       $("#sobre").html("Foi um dos principais líderes da Insurreição Pernambucana, movimento responsável pela expulsão dos neerlandeses do Nordeste do Brasil. Conhecedor das técnicas de combate dos indígenas, foi apelidado de 'mestre das emboscadas'.");	
                                $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Ant%C3%B3nio_Dias_Cardoso'>clique aqui.</a>");
+                               $('#popupnext').modal('show');
+                            }, 67200);
+                        }
+                    }else if(document.getElementById('animated-marker-04').object3D.visible == true) {
+                        if(!elem){
+                            elem = true;
+                            entity = document.getElementById('animated-marker-04').querySelector('[sound]');
+                            soundComponent = entity.components.sound;
+                            soundComponent.playSound();
+                            setTimeout(function(){
+			       $("#titulo").html("Soldado Holandês");
+			       $("#sobre").html("");	
+                               $("#saibamais").html("se quiser saber mais, <a href=''>clique aqui.</a>");
                                $('#popupnext').modal('show');
                             }, 67200);
                         }
