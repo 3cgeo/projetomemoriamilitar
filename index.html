@@ -9,6 +9,7 @@
         <!-- CSS -->
         <link href="css/main.css?vs=01" rel="stylesheet">
         <link href="css/preloader.css?vs=01" rel="stylesheet">
+	<style>#marca-logo{height:6em;right:5px;line-height:3;position:fixed;bottom:1em;}</style>
         <!-- JS -->
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -36,13 +37,14 @@
             gesture-detector
         >
         <!-- Lista de assets -->
-            <a-assets timeout="10000">
-                <a-asset-item id="animated-asset-01" src="assets/01/01.gltf"></a-asset-item>
-                <a-asset-item id="animated-asset-02" src="assets/02/02.gltf" ></a-asset-item>
-                <a-asset-item id="animated-asset-03" src="assets/03/03.gltf" ></a-asset-item>
-                <audio id="sound01" src="fortebrum/assets/01/01.mp3" preload="auto"></audio>
-                <audio id="sound02" src="fortebrum/assets/02/02.mp3" preload="auto"></audio>
-                <audio id="sound03" src="fortebrum/assets/03/03.mp3" preload="auto"></audio>
+            <a-assets>
+                <a-asset-item id="animated-asset-01" src="assets/01/01.gltf?vs=01"></a-asset-item>
+                <a-asset-item id="animated-asset-02" src="assets/02/HENRIQUE DIAS_convertido.gltf?vs=02" ></a-asset-item>
+                <a-asset-item id="animated-asset-03" src="assets/03/ANTONIO_DIAS_CARDOSO4.gltf?vs=03" ></a-asset-item>
+		<a-asset-item id="animated-asset-04" src="assets/DOM_PEDRO_II_TESTE.glb?vs=03" ></a-asset-item>
+                <audio id="sound01" src="assets/01/01.mp3?vs=01" preload="auto"></audio>
+                <audio id="sound02" src="assets/02/Henrique_dias.mp3?vs=02" preload="auto"></audio>
+                <audio id="sound03" src="assets/03/dias_cardoso_1.mp3?vs=03" preload="auto"></audio>
             </a-assets>
             <!-- Fim Lista de assets -->
 
@@ -51,7 +53,7 @@
                 id="animated-marker-01"
                 type="pattern"
                 preset="custom"
-                url="fortebrum/assets/01/marker.patt"
+                url="assets/01/marker.patt?vs=18.08.21"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -75,7 +77,7 @@
                 id="animated-marker-02"
                 type="pattern"
                 preset="custom"
-                url="fortebrum/assets/02/marker.patt"
+                url="assets/02/marker.patt?vs=18.08.21"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -99,7 +101,7 @@
                 id="animated-marker-03"
                 type="pattern"
                 preset="custom"
-                url="fortebrum/assets/03/marker.patt"
+                url="assets/02/marker.patt?vs=18.08.21"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -119,11 +121,37 @@
                     gesture-handler
                 ></a-entity>
             </a-marker>
+		
+	    <a-marker
+                id="animated-marker-04"
+                type="pattern"
+                preset="custom"
+                url="assets/03/marker.patt?vs=18.08.21"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                soundhandler
+            >
+                <a-entity
+                    sound="src: #sound03" autoplay="false"
+                    position="0 0 0"
+                    rotation="-20 0 0"
+                    heigth="3"
+                    width="1.5"
+                    id="bowser-model"
+                    scale="1 1 1"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset-04"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
 			
             <!-- Fim Lista de marcadores -->
             <a-entity camera></a-entity>
         </a-scene>
         <div id="helpMenu" data-toggle="modal" data-target="#popup">?</div>
+	<div id="marca-logo" ><img src="images/logo.png" style="width:200px;"></div>
         <div id="language">	
             <a class="language-selector active" data-lang="pt-BR">
                 <img src="images/pt-BR.png" alt="Português">
@@ -146,10 +174,11 @@
         </div>
         <div id="popupnext" class="modal fade popup" role="dialog">
             <div class="wrapper">
-                <h2 class="popup-title">Instruções</h2>
+                <h2 class="popup-title">Saiba mais!</h2>
                 <div class="popup-content">
-                    <p>Vá para o próximo marcador!
-                    </p>
+                	<h3 id="titulo"></h3>    
+			<p id="sobre"></p>
+			<p id="saibamais"></p>
                 </div>
                 <a class="close" data-dismiss="modal"> X Fechar</a>
             </div>
@@ -164,46 +193,58 @@
                 },
                 tick: function () {
                     
-                    var entity  = document.querySelector('[sound]');
-                    var id_1    = document.getElementById('animated-marker-01');
-                    var id_2    = document.getElementById('animated-marker-02');
-                    var id_3    = document.getElementById('animated-marker-03');
-                    
-                    if (id_1.object3D.visible == true) {
+                    if (document.getElementById('animated-marker-01').object3D.visible == true) {
                         if(!elem){
                             elem = true;
-                            entity = id_1.querySelector('[sound]');
+			    var entity  = document.querySelector('[sound]');
+                            entity = document.getElementById('animated-marker-01').querySelector('[sound]');
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-                               $('#popupnext').modal('show');
-                               id_1.setAttribute('visible', false);
-                               //id_1.object3D.visible = false;
+			       $("#titulo").html("André Vidal de Negreiros");
+			       $("#sobre").html("Foi um militar e governador colonial luso-brasileiro, conhecido principalmente por ter sido um dos líderes da Insurreição Pernambucana, contra a colonização holandesa no Brasil.");	
+                               $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Andr%C3%A9_Vidal_de_Negreiros'>clique aqui.</a>");
+			       $('#popupnext').modal('show');
                             }, 54000);
                         }
-                    } else if(id_2.object3D.visible == true) {
+                    } else if(document.getElementById('animated-marker-02').object3D.visible == true) {
                         if(!elem){
                             elem = true;
-                            entity = id_2.querySelector('[sound]');
+                            entity = document.getElementById('animated-marker-02').querySelector('[sound]');
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
+			       $("#titulo").html("Henrique Dias");
+			       $("#sobre").html("Foi um militar nascido no Brasil colonial, filho de escravos africanos libertos. Foi um dos heróis da Batalha dos Guararapes, episódio decisivo da Insurreição Pernambucana (expulsão dos holandeses do Nordeste do Brasil).");	
+                                $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Henrique_Dias'>clique aqui.</a>");
                                $('#popupnext').modal('show');
-                               id_2.setAttribute('visible', false);
-                               //id_1.object3D.visible = false;
-                            }, 10000);
+                            }, 49000);
                         }
-                    }else if(id_3.object3D.visible == true) {
+                    }else if(document.getElementById('animated-marker-03').object3D.visible == true) {
                         if(!elem){
                             elem = true;
-                            entity = id_3.querySelector('[sound]');
+                            entity = document.getElementById('animated-marker-03').querySelector('[sound]');
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
+			       $("#titulo").html("António Dias Cardoso");
+			       $("#sobre").html("Foi um dos principais líderes da Insurreição Pernambucana, movimento responsável pela expulsão dos neerlandeses do Nordeste do Brasil. Conhecedor das técnicas de combate dos indígenas, foi apelidado de 'mestre das emboscadas'.");	
+                               $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Ant%C3%B3nio_Dias_Cardoso'>clique aqui.</a>");
                                $('#popupnext').modal('show');
-                               id_3.setAttribute('visible', false);
-                               //id_1.object3D.visible = false;
-                            }, 10000);
+                            }, 67200);
+                        }
+                    }else if(document.getElementById('animated-marker-04').object3D.visible == true) {
+                        if(!elem){
+                            elem = true;
+                            entity = document.getElementById('animated-marker-04').querySelector('[sound]');
+                            soundComponent = entity.components.sound;
+                            soundComponent.playSound();
+                            setTimeout(function(){
+			       $("#titulo").html("Soldado Holandês");
+			       $("#sobre").html("");	
+                               $("#saibamais").html("se quiser saber mais, <a href=''>clique aqui.</a>");
+                               $('#popupnext').modal('show');
+                            }, 67200);
                         }
                     } else {
                         elem = false;
@@ -224,7 +265,7 @@
 
             $(document).ready(function() {
 
-                setTimeout(function(){$("#preloader").fadeOut("slow")}, 8000);
+                setTimeout(function(){$("#preloader").fadeOut("slow")}, 1000);
 
             });
         </script>
