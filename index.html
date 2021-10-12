@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-        <title>Forte do brum</title>
+        <title>Projeto Memória Militar</title>
         <link rel="shortcut icon" href="ico/favicon.ico">
         <!-- CSS -->
         <link href="css/main.css?vs=01" rel="stylesheet">
         <link href="css/preloader.css?vs=01" rel="stylesheet">
-	<style>#marca-logo{height:6em;right:5px;line-height:3;position:fixed;bottom:1em;}</style>
+		<style>#marca-logo{height:6em;right:5px;line-height:3;position:fixed;bottom:1em;}</style>
         <!-- JS -->
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -38,13 +38,22 @@
         >
         <!-- Lista de assets -->
             <a-assets>
-                <a-asset-item id="animated-asset-01" src="assets/01/01.gltf?vs=01"></a-asset-item>
-                <a-asset-item id="animated-asset-02" src="assets/02/HENRIQUE DIAS_convertido.gltf?vs=02" ></a-asset-item>
-                <a-asset-item id="animated-asset-03" src="assets/03/ANTONIO_DIAS_CARDOSO4.gltf?vs=03" ></a-asset-item>
-		<a-asset-item id="animated-asset-04" src="assets/DOM_PEDRO_II_TESTE.glb?vs=03" ></a-asset-item>
-                <audio id="sound01" src="assets/01/01.mp3?vs=01" preload="auto"></audio>
-                <audio id="sound02" src="assets/02/Henrique_dias.mp3?vs=02" preload="auto"></audio>
-                <audio id="sound03" src="assets/03/dias_cardoso_1.mp3?vs=03" preload="auto"></audio>
+                <a-asset-item id="animated-asset-01" src="assets/01_gltf2_ANDRÉ_VIDAL_DE_NEGREIROS.gltf?vs=01"></a-asset-item>
+                <a-asset-item id="animated-asset-02" src="assets/01_gltf2_ANTONIO_DIAS_CARDOSO.gltf?vs=01" ></a-asset-item>
+                <a-asset-item id="animated-asset-03" src="assets/01_gltf2_DOM_PEDRO_II.gltf?vs=01" ></a-asset-item>
+				<a-asset-item id="animated-asset-04" src="assets/01_gltf2_FELIPE_CAMARÃO.gltf?vs=01" ></a-asset-item>
+				<a-asset-item id="animated-asset-05" src="assets/01_gltf2_HENRIQUE_DIAS.gltf?vs=01" ></a-asset-item>
+				<a-asset-item id="animated-asset-06" src="assets/01_gltf2_MATIAS_DE_ALBUQUERQUE.gltf?vs=01" ></a-asset-item>
+				<a-asset-item id="animated-asset-07" src="assets/01_gltf2_SOLDADO_HOLANDÊS.glb?vs=01" ></a-asset-item>
+				<a-asset-item id="animated-asset-08" src="assets/01_gltf2_SOLDADO_LUSO_BRASILEIRO.gltf?vs=01" ></a-asset-item>
+                <audio id="sound-01" src="assets/02_mp3_ANDRÉ_VIDAL_DE_NEGREIROS.mp3?vs=01" preload="auto"></audio>
+                <audio id="sound-02" src="assets/02_mp3_ANTONIO_DIAS_CARDOSO.mp3?vs=01" preload="auto"></audio>
+                <audio id="sound-03" src="assets/02_mp3_DOM_PEDRO_II.mp3?vs=01" preload="auto"></audio>
+				<audio id="sound-04" src="assets/02_mp3_FELIPE_CAMARÃO.mp3?vs=01" preload="auto"></audio>
+				<audio id="sound-05" src="assets/02_mp3_HENRIQUE_DIAS.mp3?vs=01" preload="auto"></audio>
+				<audio id="sound-06" src="assets/02_mp3_MATIAS_DE_ALBUQUERQUE.mp3?vs=01" preload="auto"></audio>
+				<audio id="sound-07" src="assets/02_mp3_SOLDADO_HOLANDÊS.mp3?vs=01" preload="auto"></audio>
+				<audio id="sound-08" src="assets/02_mp3_SOLDADO_LUSO_BRASILEIRO.mp3?vs=01" preload="auto"></audio>
             </a-assets>
             <!-- Fim Lista de assets -->
 
@@ -53,14 +62,14 @@
                 id="animated-marker-01"
                 type="pattern"
                 preset="custom"
-                url="assets/01/marker.patt?vs=18.08.21"
+                url="assets/03_marker_ANDRÉ_VIDAL_DE_NEGREIROS.patt?vs=01"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 soundhandler
             >
                 <a-entity
-                    sound="src: #sound01" autoplay="false"
+                    sound="src: #sound-01" autoplay="false"
                     position="0 0.10 0"
                     rotation="-20 0 0"
                     heigth="3"
@@ -77,14 +86,14 @@
                 id="animated-marker-02"
                 type="pattern"
                 preset="custom"
-                url="assets/02/marker.patt?vs=18.08.21"
+                url="assets/03_marker_ANTONIO_DIAS_CARDOSO.patt?vs=01"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 soundhandler
             >
                 <a-entity
-                    sound="src: #sound02" autoplay="false"
+                    sound="src: #sound-02" autoplay="false"
                     position="0 0 0"
                     rotation="-20 0 0"
                     heigth="3"
@@ -101,14 +110,14 @@
                 id="animated-marker-03"
                 type="pattern"
                 preset="custom"
-                url="assets/02/marker.patt?vs=18.08.21"
+                url="assets/03_marker_DOM_PEDRO_II.patt?vs=01"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 soundhandler
             >
                 <a-entity
-                    sound="src: #sound03" autoplay="false"
+                    sound="src: #sound-03" autoplay="false"
                     position="0 0 0"
                     rotation="-20 0 0"
                     heigth="3"
@@ -122,18 +131,18 @@
                 ></a-entity>
             </a-marker>
 		
-	    <a-marker
+			<a-marker
                 id="animated-marker-04"
                 type="pattern"
                 preset="custom"
-                url="assets/03/marker.patt?vs=18.08.21"
+                url="assets/03_marker_FELIPE_CAMARÃO.patt?vs=01"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 soundhandler
             >
                 <a-entity
-                    sound="src: #sound03" autoplay="false"
+                    sound="src: #sound-04" autoplay="false"
                     position="0 0 0"
                     rotation="-20 0 0"
                     heigth="3"
@@ -142,6 +151,106 @@
                     scale="1 1 1"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset-04"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			
+			<a-marker
+                id="animated-marker-05"
+                type="pattern"
+                preset="custom"
+                url="assets/03_marker_HENRIQUE_DIAS.patt?vs=01"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                soundhandler
+            >
+                <a-entity
+                    sound="src: #sound-05" autoplay="false"
+                    position="0 0 0"
+                    rotation="-20 0 0"
+                    heigth="3"
+                    width="1.5"
+                    id="bowser-model"
+                    scale="1 1 1"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset-05"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			
+			<a-marker
+                id="animated-marker-06"
+                type="pattern"
+                preset="custom"
+                url="assets/03_marker_MATIAS_DE_ALBUQUERQUE.patt?vs=01"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                soundhandler
+            >
+                <a-entity
+                    sound="src: #sound-06" autoplay="false"
+                    position="0 0 0"
+                    rotation="-20 0 0"
+                    heigth="3"
+                    width="1.5"
+                    id="bowser-model"
+                    scale="1 1 1"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset-06"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			
+			<a-marker
+                id="animated-marker-07"
+                type="pattern"
+                preset="custom"
+                url="assets/03_marker_SOLDADO_HOLANDÊS.patt?vs=01"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                soundhandler
+            >
+                <a-entity
+                    sound="src: #sound-07" autoplay="false"
+                    position="0 0 0"
+                    rotation="-20 0 0"
+                    heigth="3"
+                    width="1.5"
+                    id="bowser-model"
+                    scale="1 1 1"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset-07"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			
+			<a-marker
+                id="animated-marker-08"
+                type="pattern"
+                preset="custom"
+                url="assets/03_marker_SOLDADO_LUSO_BRASILEIRO.patt?vs=01"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                soundhandler
+            >
+                <a-entity
+                    sound="src: #sound-08" autoplay="false"
+                    position="0 0 0"
+                    rotation="-20 0 0"
+                    heigth="3"
+                    width="1.5"
+                    id="bowser-model"
+                    scale="1 1 1"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset-08"
                     class="clickable"
                     gesture-handler
                 ></a-entity>
@@ -196,15 +305,15 @@
                     if (document.getElementById('animated-marker-01').object3D.visible == true) {
                         if(!elem){
                             elem = true;
-			    var entity  = document.querySelector('[sound]');
+							var entity  = document.querySelector('[sound]');
                             entity = document.getElementById('animated-marker-01').querySelector('[sound]');
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-			       $("#titulo").html("André Vidal de Negreiros");
-			       $("#sobre").html("Foi um militar e governador colonial luso-brasileiro, conhecido principalmente por ter sido um dos líderes da Insurreição Pernambucana, contra a colonização holandesa no Brasil.");	
+								$("#titulo").html("André Vidal de Negreiros");
+								$("#sobre").html("Foi um militar e governador colonial luso-brasileiro, conhecido principalmente por ter sido um dos líderes da Insurreição Pernambucana, contra a colonização holandesa no Brasil.");	
                                $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Andr%C3%A9_Vidal_de_Negreiros'>clique aqui.</a>");
-			       $('#popupnext').modal('show');
+								$('#popupnext').modal('show');
                             }, 54000);
                         }
                     } else if(document.getElementById('animated-marker-02').object3D.visible == true) {
@@ -214,11 +323,11 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-			       $("#titulo").html("Henrique Dias");
-			       $("#sobre").html("Foi um militar nascido no Brasil colonial, filho de escravos africanos libertos. Foi um dos heróis da Batalha dos Guararapes, episódio decisivo da Insurreição Pernambucana (expulsão dos holandeses do Nordeste do Brasil).");	
-                                $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Henrique_Dias'>clique aqui.</a>");
-                               $('#popupnext').modal('show');
-                            }, 49000);
+								$("#titulo").html("António Dias Cardoso");
+								$("#sobre").html("Foi um dos principais líderes da Insurreição Pernambucana, movimento responsável pela expulsão dos neerlandeses do Nordeste do Brasil. Conhecedor das técnicas de combate dos indígenas, foi apelidado de 'mestre das emboscadas'.");	
+								$("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Ant%C3%B3nio_Dias_Cardoso'>clique aqui.</a>");
+								$('#popupnext').modal('show');
+                            }, 67200);
                         }
                     }else if(document.getElementById('animated-marker-03').object3D.visible == true) {
                         if(!elem){
@@ -227,10 +336,10 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-			       $("#titulo").html("António Dias Cardoso");
-			       $("#sobre").html("Foi um dos principais líderes da Insurreição Pernambucana, movimento responsável pela expulsão dos neerlandeses do Nordeste do Brasil. Conhecedor das técnicas de combate dos indígenas, foi apelidado de 'mestre das emboscadas'.");	
-                               $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Ant%C3%B3nio_Dias_Cardoso'>clique aqui.</a>");
-                               $('#popupnext').modal('show');
+							    $("#titulo").html("Dom Pedro II");
+								$("#sobre").html("...");	
+								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
+								$('#popupnext').modal('show');
                             }, 67200);
                         }
                     }else if(document.getElementById('animated-marker-04').object3D.visible == true) {
@@ -240,10 +349,62 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-			       $("#titulo").html("Soldado Holandês");
-			       $("#sobre").html("");	
-                               $("#saibamais").html("se quiser saber mais, <a href=''>clique aqui.</a>");
-                               $('#popupnext').modal('show');
+								$("#titulo").html("Felipe Camarão");
+								$("#sobre").html("...");	
+								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
+								$('#popupnext').modal('show');
+                            }, 67200);
+                        }
+                    }else if(document.getElementById('animated-marker-05').object3D.visible == true) {
+                        if(!elem){
+                            elem = true;
+                            entity = document.getElementById('animated-marker-05').querySelector('[sound]');
+                            soundComponent = entity.components.sound;
+                            soundComponent.playSound();
+                            setTimeout(function(){
+								$("#titulo").html("Henrique Dias");
+								$("#sobre").html("Foi um militar nascido no Brasil colonial, filho de escravos africanos libertos. Foi um dos heróis da Batalha dos Guararapes, episódio decisivo da Insurreição Pernambucana (expulsão dos holandeses do Nordeste do Brasil).");	
+                                $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Henrique_Dias'>clique aqui.</a>");
+								$('#popupnext').modal('show');
+                            }, 49000);
+                        }
+                    }else if(document.getElementById('animated-marker-06').object3D.visible == true) {
+                        if(!elem){
+                            elem = true;
+                            entity = document.getElementById('animated-marker-06').querySelector('[sound]');
+                            soundComponent = entity.components.sound;
+                            soundComponent.playSound();
+                            setTimeout(function(){
+								$("#titulo").html("Matias de Albuquerque");
+								$("#sobre").html("...");	
+								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
+								$('#popupnext').modal('show');
+                            }, 67200);
+                        }
+                    }else if(document.getElementById('animated-marker-07').object3D.visible == true) {
+                        if(!elem){
+                            elem = true;
+                            entity = document.getElementById('animated-marker-07').querySelector('[sound]');
+                            soundComponent = entity.components.sound;
+                            soundComponent.playSound();
+                            setTimeout(function(){
+								$("#titulo").html("Soldado Holandês");
+								$("#sobre").html("...");	
+								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
+								$('#popupnext').modal('show');
+                            }, 67200);
+                        }
+                    }else if(document.getElementById('animated-marker-08').object3D.visible == true) {
+                        if(!elem){
+                            elem = true;
+                            entity = document.getElementById('animated-marker-08').querySelector('[sound]');
+                            soundComponent = entity.components.sound;
+                            soundComponent.playSound();
+                            setTimeout(function(){
+								$("#titulo").html("Soldado Luso Brasileiro");
+								$("#sobre").html("...");	
+								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
+								$('#popupnext').modal('show');
                             }, 67200);
                         }
                     } else {
