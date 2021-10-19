@@ -9,7 +9,7 @@
         <!-- CSS -->
         <link href="css/main.css?vs=01" rel="stylesheet">
         <link href="css/preloader.css?vs=01" rel="stylesheet">
-		<style>#marca-logo{height:6em;right:5px;line-height:3;position:fixed;bottom:1em;}</style>
+	<style>#marca-logo{height:6em;right:5px;line-height:3;position:fixed;bottom:1em;}</style>
         <!-- JS -->
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -41,19 +41,19 @@
                 <a-asset-item id="animated-asset-01" src="assets/01_gltf2_ANDRÉ_VIDAL_DE_NEGREIROS.gltf?vs=01"></a-asset-item>
                 <a-asset-item id="animated-asset-02" src="assets/01_gltf2_ANTONIO_DIAS_CARDOSO.gltf?vs=01" ></a-asset-item>
                 <a-asset-item id="animated-asset-03" src="assets/01_gltf2_DOM_PEDRO_II.gltf?vs=01" ></a-asset-item>
-				<a-asset-item id="animated-asset-04" src="assets/01_gltf2_FELIPE_CAMARÃO.gltf?vs=01" ></a-asset-item>
-				<a-asset-item id="animated-asset-05" src="assets/01_gltf2_HENRIQUE_DIAS.gltf?vs=01" ></a-asset-item>
-				<a-asset-item id="animated-asset-06" src="assets/01_gltf2_MATIAS_DE_ALBUQUERQUE.gltf?vs=01" ></a-asset-item>
-				<a-asset-item id="animated-asset-07" src="assets/01_gltf2_SOLDADO_HOLANDÊS.glb?vs=01" ></a-asset-item>
-				<a-asset-item id="animated-asset-08" src="assets/01_gltf2_SOLDADO_LUSO_BRASILEIRO.gltf?vs=01" ></a-asset-item>
+		<a-asset-item id="animated-asset-04" src="assets/01_gltf2_FELIPE_CAMARÃO.gltf?vs=01" ></a-asset-item>
+		<a-asset-item id="animated-asset-05" src="assets/01_gltf2_HENRIQUE_DIAS.gltf?vs=01" ></a-asset-item>
+		<a-asset-item id="animated-asset-06" src="assets/01_gltf2_MATIAS_DE_ALBUQUERQUE.gltf?vs=01" ></a-asset-item>
+		<a-asset-item id="animated-asset-07" src="assets/01_gltf2_SOLDADO_HOLANDÊS.glb?vs=01" ></a-asset-item>
+		<a-asset-item id="animated-asset-08" src="assets/01_gltf2_SOLDADO_LUSO_BRASILEIRO.gltf?vs=01" ></a-asset-item>
                 <audio id="sound-01" src="assets/02_mp3_ANDRÉ_VIDAL_DE_NEGREIROS.mp3?vs=01" preload="auto"></audio>
                 <audio id="sound-02" src="assets/02_mp3_ANTONIO_DIAS_CARDOSO.mp3?vs=01" preload="auto"></audio>
                 <audio id="sound-03" src="assets/02_mp3_DOM_PEDRO_II.mp3?vs=01" preload="auto"></audio>
-				<audio id="sound-04" src="assets/02_mp3_FELIPE_CAMARÃO.mp3?vs=01" preload="auto"></audio>
-				<audio id="sound-05" src="assets/02_mp3_HENRIQUE_DIAS.mp3?vs=01" preload="auto"></audio>
-				<audio id="sound-06" src="assets/02_mp3_MATIAS_DE_ALBUQUERQUE.mp3?vs=01" preload="auto"></audio>
-				<audio id="sound-07" src="assets/02_mp3_SOLDADO_HOLANDÊS.mp3?vs=01" preload="auto"></audio>
-				<audio id="sound-08" src="assets/02_mp3_SOLDADO_LUSO_BRASILEIRO.mp3?vs=01" preload="auto"></audio>
+		<audio id="sound-04" src="assets/02_mp3_FELIPE_CAMARÃO.mp3?vs=01" preload="auto"></audio>
+		<audio id="sound-05" src="assets/02_mp3_HENRIQUE_DIAS.mp3?vs=01" preload="auto"></audio>
+		<audio id="sound-06" src="assets/02_mp3_MATIAS_DE_ALBUQUERQUE.mp3?vs=01" preload="auto"></audio>
+		<audio id="sound-07" src="assets/02_mp3_SOLDADO_HOLANDÊS.mp3?vs=01" preload="auto"></audio>
+		<audio id="sound-08" src="assets/02_mp3_SOLDADO_LUSO_BRASILEIRO.mp3?vs=01" preload="auto"></audio>
             </a-assets>
             <!-- Fim Lista de assets -->
 
@@ -304,30 +304,30 @@
                     
                     if (document.getElementById('animated-marker-01').object3D.visible == true) {
                         if(!elem){
-                            elem = true;
-							var entity  = document.querySelector('[sound]');
-                            entity = document.getElementById('animated-marker-01').querySelector('[sound]');
-                            soundComponent = entity.components.sound;
-                            soundComponent.playSound();
-                            setTimeout(function(){
-								$("#titulo").html("André Vidal de Negreiros");
-								$("#sobre").html("Foi um militar e governador colonial luso-brasileiro, conhecido principalmente por ter sido um dos líderes da Insurreição Pernambucana, contra a colonização holandesa no Brasil.");	
-                               $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Andr%C3%A9_Vidal_de_Negreiros'>clique aqui.</a>");
-								$('#popupnext').modal('show');
+                            	elem = true;
+			    	var entity  = document.querySelector('[sound]');
+                            	entity = document.getElementById('animated-marker-01').querySelector('[sound]');
+                            	soundComponent = entity.components.sound;
+                            	soundComponent.playSound();
+                            	setTimeout(function(){
+				$("#titulo").html("André Vidal de Negreiros");
+				$("#sobre").html("Foi um militar e governador colonial luso-brasileiro, conhecido principalmente por ter sido um dos líderes da Insurreição Pernambucana, contra a colonização holandesa no Brasil.");	
+                               	$("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Andr%C3%A9_Vidal_de_Negreiros'>clique aqui.</a>");
+				$('#popupnext').modal('show');
                             }, 54000);
 			    clearTimeout();
                         }
                     } else if(document.getElementById('animated-marker-02').object3D.visible == true) {
                         if(!elem){
-                            elem = true;
-                            entity = document.getElementById('animated-marker-02').querySelector('[sound]');
-                            soundComponent = entity.components.sound;
-                            soundComponent.playSound();
-                            setTimeout(function(){
-								$("#titulo").html("António Dias Cardoso");
-								$("#sobre").html("Foi um dos principais líderes da Insurreição Pernambucana, movimento responsável pela expulsão dos neerlandeses do Nordeste do Brasil. Conhecedor das técnicas de combate dos indígenas, foi apelidado de 'mestre das emboscadas'.");	
-								$("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Ant%C3%B3nio_Dias_Cardoso'>clique aqui.</a>");
-								$('#popupnext').modal('show');
+                            	elem = true;
+                           	entity = document.getElementById('animated-marker-02').querySelector('[sound]');
+                            	soundComponent = entity.components.sound;
+                            	soundComponent.playSound();
+                            	setTimeout(function(){
+				$("#titulo").html("António Dias Cardoso");
+				$("#sobre").html("Foi um dos principais líderes da Insurreição Pernambucana, movimento responsável pela expulsão dos neerlandeses do Nordeste do Brasil. Conhecedor das técnicas de combate dos indígenas, foi apelidado de 'mestre das emboscadas'.");	
+				$("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Ant%C3%B3nio_Dias_Cardoso'>clique aqui.</a>");
+				$('#popupnext').modal('show');
                             }, 67200);
 			    clearTimeout();
                         }
@@ -338,10 +338,10 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-							    $("#titulo").html("Dom Pedro II");
-								$("#sobre").html("...");	
-								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
-								$('#popupnext').modal('show');
+			    	$("#titulo").html("Dom Pedro II");
+				$("#sobre").html("Foi o segundo e último monarca do Império do Brasil, tendo reinado o país durante um período de 58 anos.");	
+				$("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Pedro_II_do_Brasil'>clique aqui.</a>");
+				$('#popupnext').modal('show');
                             }, 97000);
 			    clearTimeout();
                         }
@@ -352,10 +352,10 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-								$("#titulo").html("Felipe Camarão");
-								$("#sobre").html("...");	
-								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
-								$('#popupnext').modal('show');
+				$("#titulo").html("Felipe Camarão");
+				$("#sobre").html("Foi um militar de nacionalidade portuguesa e de naturalidade brasileira, a serviço do Império Português, tendo sido também um líder indígena. Chefe nativo dos índios potiguares, foi um dos heróis da Batalha dos Guararapes, episódio decisivo da Insurreição Pernambucana. Recebeu o título de 'Capitão-Mor de Todos os Índios do Brasil'.");	
+				$("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Filipe_Camar%C3%A3o'>clique aqui.</a>");
+				$('#popupnext').modal('show');
                             }, 52000);
 			   clearTimeout();
                         }
@@ -366,10 +366,10 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-								$("#titulo").html("Henrique Dias");
-								$("#sobre").html("Foi um militar nascido no Brasil colonial, filho de escravos africanos libertos. Foi um dos heróis da Batalha dos Guararapes, episódio decisivo da Insurreição Pernambucana (expulsão dos holandeses do Nordeste do Brasil).");	
-                                $("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Henrique_Dias'>clique aqui.</a>");
-								$('#popupnext').modal('show');
+				$("#titulo").html("Henrique Dias");
+				$("#sobre").html("Foi um militar nascido no Brasil colonial, filho de escravos africanos libertos. Foi um dos heróis da Batalha dos Guararapes, episódio decisivo da Insurreição Pernambucana (expulsão dos holandeses do Nordeste do Brasil).");	
+				$("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Henrique_Dias'>clique aqui.</a>");
+				$('#popupnext').modal('show');
                             }, 49000);
 			   clearTimeout();
                         }
@@ -380,10 +380,10 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-								$("#titulo").html("Matias de Albuquerque");
-								$("#sobre").html("...");	
-								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
-								$('#popupnext').modal('show');
+				$("#titulo").html("Matias de Albuquerque");
+				$("#sobre").html("Foi um administrador colonial e militar superior luso-brasileiro. Foi Governador da Capitania de Pernambuco.");	
+				$("#saibamais").html("se quiser saber mais, <a href='https://pt.wikipedia.org/wiki/Matias_de_Albuquerque,_Conde_de_Alegrete'>clique aqui.</a>");
+				$('#popupnext').modal('show');
                             }, 89000);
 			    clearTimeout();
                         }
@@ -394,10 +394,10 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-								$("#titulo").html("Soldado Holandês");
-								$("#sobre").html("...");	
-								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
-								$('#popupnext').modal('show');
+				$("#titulo").html("Soldado Holandês");
+				$("#sobre").html("...");	
+				$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
+				$('#popupnext').modal('show');
                             }, 105000);
 			    clearTimeout();
                         }
@@ -408,10 +408,10 @@
                             soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
-								$("#titulo").html("Soldado Luso Brasileiro");
-								$("#sobre").html("...");	
-								$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
-								$('#popupnext').modal('show');
+				$("#titulo").html("Soldado Luso Brasileiro");
+				$("#sobre").html("...");	
+				$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
+				$('#popupnext').modal('show');
                             }, 42000);
 			    clearTimeout();
                         }
