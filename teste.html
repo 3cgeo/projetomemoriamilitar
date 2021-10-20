@@ -416,9 +416,10 @@
 			    clearTimeout();
                         }
                     } else {
-                        elem = false;
-			sound.currentTime = 0;
-			sound.pause();
+			var elem    = false;
+                    	var entity  = document.querySelector('[sound]');
+                    	var soundComponent = entity.components.sound;
+                    	soundComponent.pauseSound();
                     }
                 }
             });
