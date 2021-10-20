@@ -294,20 +294,15 @@
         </div>
         <script>
             AFRAME.registerComponent('soundhandler', {
-                init: function () {
-                    var elem    = false;
-                    var entity  = document.querySelector('[sound]');
-                    var soundComponent = entity.components.sound;
-                    soundComponent.pauseSound();
-                },
                 tick: function () {
-                    
+			
+                    var entity = document.querySelector('[sound]');
+			
                     if (document.getElementById('animated-marker-01').object3D.visible == true) {
                         if(!elem){
                             	elem = true;
-			    	var entity  = document.querySelector('[sound]');
                             	entity = document.getElementById('animated-marker-01').querySelector('[sound]');
-                            	var soundComponent = entity.components.sound;
+                            	soundComponent = entity.components.sound;
                             	soundComponent.playSound();
                             	setTimeout(function(){
 				$("#titulo").html("André Vidal de Negreiros");
@@ -321,7 +316,7 @@
                         if(!elem){
                             	elem = true;
                            	entity = document.getElementById('animated-marker-02').querySelector('[sound]');
-                            	var soundComponent = entity.components.sound;
+                            	soundComponent = entity.components.sound;
                             	soundComponent.playSound();
                             	setTimeout(function(){
 				$("#titulo").html("António Dias Cardoso");
@@ -335,7 +330,7 @@
                         if(!elem){
                             elem = true;
                             entity = document.getElementById('animated-marker-03').querySelector('[sound]');
-                            var soundComponent = entity.components.sound;
+                            soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
 			    	$("#titulo").html("Dom Pedro II");
@@ -349,7 +344,7 @@
                         if(!elem){
                             elem = true;
                             entity = document.getElementById('animated-marker-04').querySelector('[sound]');
-                            var soundComponent = entity.components.sound;
+                            soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
 				$("#titulo").html("Felipe Camarão");
@@ -363,7 +358,7 @@
                         if(!elem){
                             elem = true;
                             entity = document.getElementById('animated-marker-05').querySelector('[sound]');
-                            var soundComponent = entity.components.sound;
+                            soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
 				$("#titulo").html("Henrique Dias");
@@ -377,7 +372,7 @@
                         if(!elem){
                             elem = true;
                             entity = document.getElementById('animated-marker-06').querySelector('[sound]');
-                            var soundComponent = entity.components.sound;
+                            soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
 				$("#titulo").html("Matias de Albuquerque");
@@ -391,7 +386,7 @@
                         if(!elem){
                             elem = true;
                             entity = document.getElementById('animated-marker-07').querySelector('[sound]');
-                            var soundComponent = entity.components.sound;
+                            soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
 				$("#titulo").html("Soldado Holandês");
@@ -405,7 +400,7 @@
                         if(!elem){
                             elem = true;
                             entity = document.getElementById('animated-marker-08').querySelector('[sound]');
-                            var soundComponent = entity.components.sound;
+                            soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
 				$("#titulo").html("Soldado Luso Brasileiro");
@@ -416,10 +411,8 @@
 			    clearTimeout();
                         }
                     } else {
-			var elem    = false;
-                    	var entity  = document.querySelector('[sound]');
-                    	var soundComponent = entity.components.sound;
-                    	soundComponent.pauseSound();
+			elem  = false;
+                    	entity.components.sound.pauseSound();
                     }
                 }
             });
