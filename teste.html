@@ -417,9 +417,8 @@
                         }
                     } else {
                         elem = false;
-                        //var entity  = document.querySelector('[sound]');
-                    	//soundComponent = entity.components.sound;
-                    	//soundComponent.pauseSound();
+			var entity = document.querySelector('[sound]');
+			entity.components.sound.pauseSound();
                     }
                 }
             });
