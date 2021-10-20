@@ -411,11 +411,7 @@
 			    clearTimeout();
                         }
                     } else {
-			elem  = false;
-			alert("Saiu");  
-			const audio = document.querySelector("[sound]");
-			audio.pause();
-			audio.currentTime = 0;
+			entity.components.sound.pauseSound();
                     }
                 }
             });
