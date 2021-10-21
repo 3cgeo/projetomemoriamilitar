@@ -289,7 +289,7 @@
 			<p id="sobre"></p>
 			<p id="saibamais"></p>
                 </div>
-                <a class="close" data-dismiss="modal"> X Fechar</a>
+                <a class="close" data-dismiss="modal" id="closePopuptext"> X Fechar</a>
             </div>
         </div>
         <script>
@@ -419,6 +419,10 @@
         <script>	
             $(document).ready(function() {
                $('#popup').modal('show');
+            });
+	    $('#closePopuptext').click(function() {
+		alert("Fechou!");    
+               $('#popupnext').modal('hide');
             });
         </script>
         <script>
