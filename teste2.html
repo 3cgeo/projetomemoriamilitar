@@ -428,10 +428,10 @@
                     } else {
                         elem = false;
 			id_execucao = document.getElementById('execucao').value;  
-			console.log(id_execucao);    
-                        //var entity  = document.querySelector('[sound]');
-                    	//soundComponent = entity.components.sound;
-                    	//soundComponent.pauseSound();
+			console.log(id_execucao); 
+		    	entity = document.getElementById(id_execucao).querySelector('[sound]');
+		    	soundComponent = entity.components.sound;
+		    	soundComponent.pauseSound();
                     }
                 }
             });
