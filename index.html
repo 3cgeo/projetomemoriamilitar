@@ -12,7 +12,7 @@
 	<style>#marca-logo{height:6em;right:5px;line-height:3;position:fixed;bottom:1em;}</style>
         <!-- JS -->
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="js/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
@@ -27,6 +27,8 @@
             </div>
         </div>
         <!--end preloader -->
+	<!-- ID em Execução-->
+	<input type="hidden" id="execucao"/>
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
@@ -131,7 +133,7 @@
                 ></a-entity>
             </a-marker>
 		
-			<a-marker
+	    <a-marker
                 id="animated-marker-04"
                 type="pattern"
                 preset="custom"
@@ -156,7 +158,7 @@
                 ></a-entity>
             </a-marker>
 			
-			<a-marker
+	    <a-marker
                 id="animated-marker-05"
                 type="pattern"
                 preset="custom"
@@ -181,7 +183,7 @@
                 ></a-entity>
             </a-marker>
 			
-			<a-marker
+	    <a-marker
                 id="animated-marker-06"
                 type="pattern"
                 preset="custom"
@@ -206,7 +208,7 @@
                 ></a-entity>
             </a-marker>
 			
-			<a-marker
+	    <a-marker
                 id="animated-marker-07"
                 type="pattern"
                 preset="custom"
@@ -231,7 +233,7 @@
                 ></a-entity>
             </a-marker>
 			
-			<a-marker
+	    <a-marker
                 id="animated-marker-08"
                 type="pattern"
                 preset="custom"
@@ -289,7 +291,7 @@
 			<p id="sobre"></p>
 			<p id="saibamais"></p>
                 </div>
-                <a class="close" data-dismiss="modal"> X Fechar</a>
+                <a class="close" id="closePopuptext" > X Fechar</a>
             </div>
         </div>
         <script>
@@ -301,10 +303,11 @@
                     soundComponent.pauseSound();
                 },
                 tick: function () {
-                    
+			
                     if (document.getElementById('animated-marker-01').object3D.visible == true) {
                         if(!elem){
                             	elem = true;
+				document.getElementById('execucao').value = 'animated-marker-01';
 			    	var entity  = document.querySelector('[sound]');
                             	entity = document.getElementById('animated-marker-01').querySelector('[sound]');
                             	var soundComponent = entity.components.sound;
@@ -320,6 +323,7 @@
                     } else if(document.getElementById('animated-marker-02').object3D.visible == true) {
                         if(!elem){
                             	elem = true;
+				document.getElementById('execucao').value = 'animated-marker-02';
                            	entity = document.getElementById('animated-marker-02').querySelector('[sound]');
                             	var soundComponent = entity.components.sound;
                             	soundComponent.playSound();
@@ -334,6 +338,7 @@
                     }else if(document.getElementById('animated-marker-03').object3D.visible == true) {
                         if(!elem){
                             elem = true;
+			    document.getElementById('execucao').value = 'animated-marker-03';
                             entity = document.getElementById('animated-marker-03').querySelector('[sound]');
                             var soundComponent = entity.components.sound;
                             soundComponent.playSound();
@@ -348,6 +353,7 @@
                     }else if(document.getElementById('animated-marker-04').object3D.visible == true) {
                         if(!elem){
                             elem = true;
+			    document.getElementById('execucao').value = 'animated-marker-04';
                             entity = document.getElementById('animated-marker-04').querySelector('[sound]');
                             var soundComponent = entity.components.sound;
                             soundComponent.playSound();
@@ -362,6 +368,7 @@
                     }else if(document.getElementById('animated-marker-05').object3D.visible == true) {
                         if(!elem){
                             elem = true;
+			    document.getElementById('execucao').value = 'animated-marker-05';
                             entity = document.getElementById('animated-marker-05').querySelector('[sound]');
                             var soundComponent = entity.components.sound;
                             soundComponent.playSound();
@@ -376,6 +383,7 @@
                     }else if(document.getElementById('animated-marker-06').object3D.visible == true) {
                         if(!elem){
                             elem = true;
+			    document.getElementById('execucao').value = 'animated-marker-06';
                             entity = document.getElementById('animated-marker-06').querySelector('[sound]');
                             var soundComponent = entity.components.sound;
                             soundComponent.playSound();
@@ -390,13 +398,14 @@
                     }else if(document.getElementById('animated-marker-07').object3D.visible == true) {
                         if(!elem){
                             elem = true;
+			    document.getElementById('execucao').value = 'animated-marker-07';
                             entity = document.getElementById('animated-marker-07').querySelector('[sound]');
                             var soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
 				$("#titulo").html("Soldado Holandês");
-				$("#sobre").html("...");	
-				$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
+				$("#sobre").html("Olá! Eu sou AMBROSIO RICHSSOFFER, soldado Holandês. Eu nasci em 15 de fevereiro de 1612, em uma pequena cidade chamada Strassburgo, na então República das Sete Províncias Unidas da Holanda e recém libertada do domínio Espanhol, devido à Reforma Protestante.");	
+				$("#saibamais").html("");
 				$('#popupnext').modal('show');
                             }, 105000);
 			    clearTimeout();
@@ -404,22 +413,27 @@
                     }else if(document.getElementById('animated-marker-08').object3D.visible == true) {
                         if(!elem){
                             elem = true;
+			    document.getElementById('execucao').value = 'animated-marker-08';
                             entity = document.getElementById('animated-marker-08').querySelector('[sound]');
                             var soundComponent = entity.components.sound;
                             soundComponent.playSound();
                             setTimeout(function(){
 				$("#titulo").html("Soldado Luso Brasileiro");
-				$("#sobre").html("...");	
-				$("#saibamais").html("se quiser saber mais, <a href='#'>clique aqui.</a>");
+				$("#sobre").html("Olá. Eu sou um dos milhares de soldados do exército luso-brasileiro que lutou para expulsar os holandeses de Pernambuco, fui combatente das Batalhas dos Guararapes, onde tombei em campo de batalha. Fui sepultado na Igreja de Nossa Senhora dos Prazeres, nos montes dos Guararapes, levei comigo uma medida de pólvora, algumas balas de mosquete e um terço em osso. Meus restos mortais foram encontrados nas escavações arqueológicas realizadas pelo Laboratório de Arqueologia da Universidade Federal de Pernambuco nos Montes dos Guararapes. Hoje me encontro no Museu Militar do Forte do Brum em homenagem aos que tombaram em combates nos Montes Guararapes para tornar esta terra a nossa Pátria!!! Brasil!!!");	
+				$("#saibamais").html("");
 				$('#popupnext').modal('show');
                             }, 42000);
 			    clearTimeout();
                         }
                     } else {
                         elem = false;
-                        //var entity  = document.querySelector('[sound]');
-                    	//soundComponent = entity.components.sound;
-                    	//soundComponent.pauseSound();
+			var id_execucao = document.getElementById('execucao').value;  
+			console.log(id_execucao);
+			if(id_execucao != '') {
+				entity = document.getElementById(id_execucao).querySelector('[sound]');
+		    		soundComponent = entity.components.sound;
+		    		soundComponent.pauseSound();
+			}
                     }
                 }
             });
@@ -427,6 +441,9 @@
         <script>	
             $(document).ready(function() {
                $('#popup').modal('show');
+            });
+	    $('#closePopuptext').click(function() {
+               $('#popupnext').modal('hide'); 
             });
         </script>
         <script>
