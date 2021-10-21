@@ -427,12 +427,12 @@
                         }
                     } else {
                         elem = false;
-			id_execucao = document.getElementById('execucao').value;  
+			var id_execucao = document.getElementById('execucao').value;  
 			console.log(id_execucao);
-			if(id_execucao != null || id_execucao != '') {
-				//entity = document.getElementById(id_execucao).querySelector('[sound]');
-		    		//soundComponent = entity.components.sound;
-		    		//soundComponent.pauseSound();
+			if(id_execucao !== NULL || id_execucao != '') {
+				entity = document.getElementById(id_execucao).querySelector('[sound]');
+		    		soundComponent = entity.components.sound;
+		    		soundComponent.pauseSound();
 			}
                     }
                 }
