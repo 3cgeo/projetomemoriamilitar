@@ -1,6 +1,6 @@
 # Projeto memória militar
 
-<img src="/images/logo.png" alt="Projeto Memória Militar"/>
+<img src="/images/logo.png" width="150" alt="Projeto Memória Militar"/>
 
 ## Sobre
 
