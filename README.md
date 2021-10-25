@@ -8,6 +8,16 @@ O Projeto Memória Militar - Origens do Exército tem por objetivo implantar o
 
 Este Aplicativo irá mostrar os personagens militares envolvidos na história do circuito, utilizando a tecnologia de Realidade Aumentada.
 
+# Marcadores
+
+Uma experiência de RA baseada em marcador usa uma imagem em preto e branco para ancorar o conteúdo de RA. Sua cena aparecerá quando o marcador estiver no campo de visão de sua câmera.
+
+Você pode imprimir uma versão em papel do seu marcador (o que recomendamos) ou exibi-lo em uma tela.
+
+Segue abaixo a lista de marcadores do projeto memória militar:
+
+- <a href="/images/logo.png" target="_blank">VIDAL DE NEGREIROS</a>
+
 ## Autores
 
 Desenvolvido pelo 3° Centro de Geoinformação - Olinda-PE
