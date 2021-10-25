@@ -8,4 +8,6 @@ O Projeto Memória Militar - Origens do Exército tem por objetivo implantar o
 
 Este Aplicativo irá mostrar os personagens militares envolvidos na história do circuito, utilizando a tecnologia de Realidade Aumentada.
 
-### Autores
+## Autores
+
+- <b>2º Ten OTT</b> Lucas Rogério Ramos <b>Cardozo</b>
