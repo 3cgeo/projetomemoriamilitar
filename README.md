@@ -16,7 +16,14 @@ Você pode imprimir uma versão em papel do seu marcador (o que recomendamos) ou
 
 Segue abaixo a lista de marcadores do projeto memória militar:
 
-- <a href="/images/logo.png" target="_blank">VIDAL DE NEGREIROS</a>
+- <a href="/images/logo.png" target="_blank">Vidal de negreiros</a>
+- <a href="/images/logo.png" target="_blank">Henrique Dias</a>
+- <a href="/images/logo.png" target="_blank">Dias Cardoso</a>
+- <a href="/images/logo.png" target="_blank">Felipe Camarão</a>
+- <a href="/images/logo.png" target="_blank">Matias de Albuquerque</a>
+- <a href="/images/logo.png" target="_blank">Dom Pedro I</a>
+- <a href="/images/logo.png" target="_blank">Sd Holandês</a>
+- <a href="/images/logo.png" target="_blank">Sd Luso Brasileiro</a>
 
 ## Autores
 
