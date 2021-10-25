@@ -16,14 +16,14 @@ Você pode imprimir uma versão em papel do seu marcador (o que recomendamos) ou
 
 Segue abaixo a lista de marcadores do projeto memória militar:
 
-- <a href="/images/logo.png" target="_blank">Vidal de negreiros</a>
-- <a href="/images/logo.png" target="_blank">Henrique Dias</a>
-- <a href="/images/logo.png" target="_blank">Dias Cardoso</a>
-- <a href="/images/logo.png" target="_blank">Felipe Camarão</a>
-- <a href="/images/logo.png" target="_blank">Matias de Albuquerque</a>
-- <a href="/images/logo.png" target="_blank">Dom Pedro I</a>
-- <a href="/images/logo.png" target="_blank">Sd Holandês</a>
-- <a href="/images/logo.png" target="_blank">Sd Luso Brasileiro</a>
+- <a href="/marcadores/01_VIDAL_NEGREIROS.png" target="_blank">Vidal de negreiros</a>
+- <a href="/marcadores/03_HENRIQUE_DIAS.png" target="_blank">Henrique Dias</a>
+- <a href="/marcadores/02_ANTONIO_DIAS_CARDOSO.png" target="_blank">Dias Cardoso</a>
+- <a href="/marcadores/05_FELIPE_CAMARAO.png" target="_blank">Felipe Camarão</a>
+- <a href="/marcadores/06_MATIAS_ALBUQUERQUE.png" target="_blank">Matias de Albuquerque</a>
+- <a href="/marcadores/04_DOM_PEDRO_II.png" target="_blank">Dom Pedro I</a>
+- <a href="/marcadores/07_SOLDADO_HOLANDÊS.png" target="_blank">Sd Holandês</a>
+- <a href="/marcadores/08_LUSO_BRASILEIRO.png" target="_blank">Sd Luso Brasileiro</a>
 
 ## Autores
 
