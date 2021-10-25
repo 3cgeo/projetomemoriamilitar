@@ -10,6 +10,8 @@ Este Aplicativo irá mostrar os personagens militares envolvidos na história do
 
 ## Autores
 
+Desenvolvido pelo 3° Centro de Geoinformação - Olinda-PE
+
 - <b>2º Ten OTT</b> Lucas Rogério Ramos <b>Cardozo</b>
 - <b>3º Sgt Topo</b> Alex <b>Melo</b> Batista de Araújo
 - <b>3º Sgt Topo</b> <b>José Vitor</b> dos Santos Junior
