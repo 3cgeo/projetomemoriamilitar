@@ -8,7 +8,7 @@ O Projeto Memória Militar - Origens do Exército tem por objetivo implantar o
 
 Este Aplicativo irá mostrar os personagens militares envolvidos na história do circuito, utilizando a tecnologia de Realidade Aumentada.
 
-# Marcadores
+## Marcadores
 
 Uma experiência de RA baseada em marcador usa uma imagem em preto e branco para ancorar o conteúdo de RA. Sua cena aparecerá quando o marcador estiver no campo de visão de sua câmera.
 
