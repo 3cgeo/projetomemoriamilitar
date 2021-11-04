@@ -30,7 +30,12 @@
         });
       </script>
 
-      <a-scene renderer="logarithmicDepthBuffer: true" background="color: #ECECEC">
+      <a-scene renderer="antialias: true;
+                   colorManagement: true;
+                   sortObjects: true;
+                   physicallyCorrectLights: true;
+                   maxCanvasWidth: 1920;
+                   maxCanvasHeight: 1920;" background="color: #ECECEC">
         <a-assets>
           <a-asset-item id="cityModel" src="assets/Forte_Brum2.gltf?vs=23"></a-asset-item>
         </a-assets>
