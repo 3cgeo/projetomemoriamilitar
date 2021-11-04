@@ -8,8 +8,6 @@
     <link rel="shortcut icon" href="ico/favicon.ico">
     <!-- JS -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
   </head>
   <body>
     <script>
@@ -30,14 +28,11 @@
         });
       </script>
 
-      <a-scene vr-mode-ui="enabled: true;"
-               id="scene"
-               gesture-detector 
-               background="color: #ECECEC">
+      <a-scene background="color: #ECECEC">
         <a-assets>
           <a-asset-item id="cityModel" src="assets/Forte_Brum2.gltf?vs=22"></a-asset-item>
         </a-assets>
-        <a-entity gltf-model="#cityModel" animation-mixer="loop: repeat" modify-materials gesture-handler></a-entity>
+        <a-entity gltf-model="#cityModel" animation-mixer="loop: repeat" modify-materials ></a-entity>
       </a-scene>
   </body>
 </html>
