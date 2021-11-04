@@ -15,6 +15,11 @@
     <script>
         AFRAME.registerComponent('modify-materials', {
           init: function () {
+            
+            var entity  = document.querySelector('[sound]');
+            var soundComponent = entity.components.sound;
+            soundComponent.playSound();
+            
             // Wait for model to load.
             this.el.addEventListener('model-loaded', () => {
               // Grab the mesh / scene.
