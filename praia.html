@@ -15,7 +15,7 @@
         AFRAME.registerComponent('modify-materials', {
           init: function () {
             
-            var entity  = document.getElementById('praia').querySelector('[sound]');
+            var entity  = document.querySelector('[sound]');
             var soundComponent = entity.components.sound;
             soundComponent.playSound();
             
