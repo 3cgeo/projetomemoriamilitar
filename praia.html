@@ -25,7 +25,7 @@
               const obj = this.el.getObject3D('mesh');
               // Go over the submeshes and modify materials we want.
               
-              this.texture = obj.material.map;
+              this.texture.needsUpdate = true;
               
               obj.traverse(node => {
                 if (node.name.indexOf('ship') !== -1) {
