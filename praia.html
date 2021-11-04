@@ -15,7 +15,7 @@
         AFRAME.registerComponent('modify-materials', {
           init: function () {
             
-            var entity  = document.querySelector('[sound]');
+            var entity  = document.getElementById('praia').querySelector('[sound]');
             var soundComponent = entity.components.sound;
             soundComponent.playSound();
             
@@ -48,7 +48,7 @@
           <a-asset-item id="cityModel" src="assets/Forte_Brum2.gltf?vs=26"></a-asset-item>
           <audio id="river" src="assets/Oceano e Gaivotas.mp3" preload="auto"></audio>
         </a-assets>
-        <a-entity gltf-model="#cityModel" animation-mixer="loop: repeat" sound="src: #river; autoplay: true" modify-materials ></a-entity>
+        <a-entity id="praia" gltf-model="#cityModel" animation-mixer="loop: repeat" sound="src: #river; autoplay: true" modify-materials ></a-entity>
       </a-scene>
   </body>
 </html>
